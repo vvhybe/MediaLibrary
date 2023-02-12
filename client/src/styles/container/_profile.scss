@@ -1,0 +1,23 @@
+@import "../main.scss";
+
+.profile{
+    @include flx-center;
+    @include bg-img(70vh, 100%, "../../public/Res/Heros/form.jpg");
+
+    .me{
+        *{
+            margin: 0;
+        }
+        
+        @include badge;
+        p{
+            span{
+                color: map-get($clr-palette, "atc");
+            }
+            @include input(40px, 300px);
+            padding: 9px 20px;
+        }
+
+    }
+}
+

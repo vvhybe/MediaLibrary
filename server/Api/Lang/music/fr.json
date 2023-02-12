@@ -1,0 +1,13 @@
+{
+    "header":{
+        "nav":["Accueil","Livres","Musiques","Vidéos","Gestion de contenu"],
+        "login":"Connexion", 
+        "logout":"Se déconnecter",
+        "regester":"S'inscrire"
+    },
+    "hero":{
+        "title":"Bienvenue dans notre Bibliothèque Musicale",
+        "motivation":"Découvrez le monde de la musique avec notre bibliothèque. Avec une vaste collection de chansons de tous les genres et de toutes les périodes, vous aurez un choix illimité.",
+        "placeholder":"Recherchez votre musique"
+    }
+}

@@ -1,0 +1,85 @@
+@import "../main.scss";
+
+
+
+main.hero{
+    position: relative;
+    &.home{
+        @include bg-img(97vh, 100%, "../../public/Res/Heros/home.jpg");
+    }
+    &.content{
+        @include bg-img(97vh, 100%, "../../public/Res/Heros/dashboard.jpg");
+    }
+    
+    @include flx-center(33px, column);
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    *{
+        z-index: 1;
+    }
+
+    h1{
+        padding-inline: 1em;
+        font-size: 3.1rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    p{
+        margin: 0;
+        width: 40%;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .oliveicon{
+        @include bg-img(120px, 320px, "../../public/Res/Icons/olive.png");
+    }
+
+}
+
+@media only screen and (max-width: 660px){
+    main{
+        h1{
+            font-size: 2rem !important;
+            font-weight: bolder;
+            width: 90% !important;
+        }
+        
+        p{
+            width: 70% !important;
+            font-size: .9rem;
+        }
+
+        
+        input{
+            width:  94%;
+        }
+
+        &:is(.home, .content){
+            h1{
+                font-size: 2.1rem !important;
+            }
+
+        }
+
+        .container{
+            // background-color: cornflowerblue !important;
+            padding-top: 2vh !important;
+            // height: 100%;
+            .top{
+                height: 40vh;
+                &.videos{
+                    transform: scale(.7) !important;
+                }
+            }
+
+        }
+    }
+}

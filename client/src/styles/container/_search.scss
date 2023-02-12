@@ -1,0 +1,124 @@
+@import "../main.scss";
+
+
+
+main.searchHero{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    @include flx-center;
+
+    .bg{
+        filter: brightness(45%) contrast(120%);
+        &.books{
+            @include bg-img(100vh, 100%, "../../public/Res/Heros/book.jpg");
+        }
+        &.music{
+            @include bg-img(100vh, 100%, "../../public/Res/Heros/music.jpg");
+        }
+        &.videos{
+            @include bg-img(100vh, 100%, "../../public/Res/Heros/video.gif");
+        }
+    }
+    
+    .container{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include flx-center(20px, column);
+
+        h1{
+            font-size: 3.5rem;
+            font-weight: 500;
+            margin: 0;
+            text-align: center;
+            color: map-get($clr-palette, "atc");
+        }
+
+        p{
+            width: 70%;
+            text-align: center;
+        }
+        
+        .search{
+            height: 80px;
+            width: 80%;
+            @include flx-center;
+            input{
+                @include input(100%, 80%, -12px, 8px);
+                font-size: 1rem;
+                &::placeholder{
+                    font-size: 1rem;
+                }
+            }
+            
+            select{
+                position: relative;
+                font-size: 1rem;
+                background-color: white;
+                @include input(100%, 18%, -12px, 0px);
+                appearance: none;
+
+                option{
+                    appearance: none;
+                    background: none;
+                    border-radius: 0;
+                    color: map-get($clr-palette, "atc");
+                    &:hover{
+                        color: map-get($clr-palette, "ptc");
+                        background: map-get($clr-palette, "atc") !important;
+                    }
+                }
+            }
+        }
+
+        .top{
+            height: 50vh;
+            width: 100%;
+            @include flx-center(25px);
+            
+            .searchresult{
+                position: relative;
+                @include flx-center(25px);
+
+                li{
+                    height: 100% !important;
+                    width: 100% !important;
+                }
+            }
+            
+            &.books{
+                .searchresult{
+                    @include bg-img(360px, 240px, "../../public/Res/Icons/book-placeholder.png");
+                    // transform: scale(1.1);
+                }
+            }
+            &.music{
+                .searchresult{
+                    @include bg-img(380px, 280px, "../../public/Res/Icons/music-placeholder.png");
+                    background-size: contain;
+                    background-position: 0 0;
+                }
+            }
+            &.videos{
+                .searchresult{
+                    @include bg-img(260px, 320px, "../../public/Res/Icons/video-placeholder.png");
+                    transform: scale(1.4);
+                }
+            }
+        }
+    }
+
+}
+
+// @media only screen and (max-width: 600px){
+//     main.searchHero{
+//         h1{
+//             font-size: 1rem;
+//         }
+
+
+//     }
+// }

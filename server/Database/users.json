@@ -1,0 +1,42 @@
+[
+    {
+        "firstName": "why",
+        "lastName": "Be",
+        "email": "whybe@lib.com",
+        "password": "$2b$07$r7.AFn4u9QLw4ll6OUhDoO3WWfh.bBtUa7yWALqP82L.mcf/pV6ru",
+        "role": "librarian",
+        "regestrationDate": "2023-01-25T20:23:12.216Z"
+    },
+    {
+        "firstName": "hola",
+        "lastName": "mondo",
+        "email": "holamondo@lib.com",
+        "password": "$2b$07$77.uCdLeeT2Pk7A5S/OCKu2ucixLz4vQeV3DmsT7Mht7REd3T8RXe",
+        "role": "user",
+        "registrationDate": "2023-01-29T13:13:16.344Z"
+    },
+    {
+        "firstName": "hello",
+        "lastName": "world",
+        "email": "helloworld@lib.com",
+        "password": "$2b$07$iLe30hKGwpjD6U8TmifN9ew098VDfSo98Dg74OzAy8J0hMtzYjB/W",
+        "role": "user",
+        "registrationDate": "2023-01-29T13:21:01.734Z"
+    },
+    {
+        "firstName": "bonjour",
+        "lastName": "lemonde",
+        "email": "bonjourlemonde@lib.com",
+        "password": "$2b$07$vr9zInRYjGpuIV1Ly7WHmu5b.B42RkEIDJfG25Jma0aOfsqD/0.Ze",
+        "role": "user",
+        "registrationDate": "2023-01-29T17:09:02.690Z"
+    },
+    {
+        "firstName": "Salma",
+        "lastName": "Issis",
+        "email": "salma@lib.com",
+        "password": "$2b$07$14SaLONg1soy4t4UDzb7cudJMU5AOqyr2aDaA5muOo2cvDF71i1Vq",
+        "role": "user",
+        "registrationDate": "2023-02-02T22:33:10.530Z"
+    }
+]

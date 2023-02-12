@@ -1,0 +1,98 @@
+@import "../main.scss";
+
+.dashboard{
+    position: relative;
+    .formerror{
+        @include form-error;
+    }
+
+    form{
+        width: 520px;
+        @include form-style;
+        z-index: 1;
+        
+        input[type="file"]{
+            padding: 10px;
+            margin: 0;
+            position: relative;
+            height: 55px;
+            text-align: center;
+            &::-webkit-file-upload-button{
+                @include btn(35px, 140px);
+                position: absolute;
+                right: 4%;
+            }
+        }
+
+        .split {
+            height: 240px;
+            width: 100%;
+            @include flx-center;
+            justify-content: space-between;
+            // background-color: aqua;
+            input[type="file"]{
+                display: none;
+                z-index: -2;
+            }
+
+            input{
+                width: 100%;
+            }
+
+            .coverpreview{
+
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            .right{
+                height: 100%;
+                width: 55%;
+                @include flx-center(0px, column);
+                justify-content: space-between;
+                // background-color: burlywood;
+            }
+
+            &.books{
+                .coverpreview{
+                    @include bg-img(100%, 40%, "../../public/Res/Icons/book-placeholder.png");
+                }
+            }
+            &.music{
+                .right{
+                    height: 80%;
+                }
+                .coverpreview{
+                    @include bg-img(80%, 40%, "../../public/Res/Icons/music-placeholder.png");
+                }
+            }
+            &.videos{
+                .right{
+                    height: 80%;
+                    background-color: cadetblue;
+                }
+                .coverpreview{
+                    @include bg-img(100%, 100%, "../../public/Res/Icons/video-placeholder.png");
+                }
+            }
+
+        }
+
+        input{
+            width: 100%;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .dashboard form{
+       margin-inline: auto;
+       transform: scale(.9);
+    }
+}

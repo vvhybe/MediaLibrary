@@ -1,0 +1,16 @@
+@import '../main.scss';
+
+.authontification{
+    position: relative;
+    @include flx-center;
+    @include bg-img(100vh, 100vw, "../../public/Res/Heros/form.jpg");
+
+    .formerror{
+        @include form-error;
+    }
+
+    form{
+        @include form-style;
+        z-index: 1;
+    }
+}

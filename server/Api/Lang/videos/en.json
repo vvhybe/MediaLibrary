@@ -1,0 +1,15 @@
+{
+    "header":{
+        "nav":["Home","Books","Music","Videos", "Content Management"],
+        "login":"Login",
+        "logout":"Logout",
+        "regester":"Regester"
+    },
+    "hero":{
+        "title":"Welcome to our Books library",
+        "motivation":"Where you can access a vast collection of videos, music, and books all in one place. Whether you're in the mood for a new movie, the latest album, or a classic novel, we have something for everyone. With our easy-to-use interface, you can easily find what you're looking for and start streaming or downloading in seconds. So why wait? Start exploring our library today and discover your next favorite piece of media!",
+        "placeholder":"Search for your book"
+    }
+
+    
+}

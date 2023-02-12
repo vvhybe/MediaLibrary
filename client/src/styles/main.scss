@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+
+
+$clr-palette: (
+  "bg":  #04070a,
+  "ptc": white,
+  "atc": #c4864f,
+  "pc":  #89613D,
+  "pc1":  #6d5036,
+  "sc":  #121B24,
+  "3c": #cecece,
+  "4c": #bebebe,
+  "error": #c02b25
+);
+
+@mixin body-init {
+  width: 99.5vw;
+  margin: 0;
+  padding: 0;
+  background-color: map-get($clr-palette, "bg");
+}
+
+@mixin global-init {
+  color: map-get($clr-palette, "ptc");
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'PT Serif', serif;
+}
+
+@mixin bg-img($h, $w, $path){
+  margin: 0;
+  padding: 0;
+  height: $h;
+  width: $w;
+  background-image: url($path);
+  @include img-demention();
+}
+
+@mixin img-demention($size: cover){
+  background-position: center;
+  background-size: $size;
+  background-repeat: no-repeat;
+}
+
+@mixin flx-center($gp: 0, $dir: row){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gp;
+  flex-direction: $dir;
+}
+
+@mixin flx-content($align){
+  @include flx-center;
+  justify-content: $align;
+}
+
+@mixin no-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @include flx-center(18px);
+}
+
+@mixin btn($h, $w, $type: "p", $offset: -6px, $shadow: 5px){
+  @include flx-center;
+  height: $h;
+  width: $w;
+  border: none;
+  background: none;
+  font-size: small;
+  font-weight: bold;
+  cursor: pointer;
+
+  @if $type == "s"{
+    color: map-get($clr-palette, "atc");
+    border: 2px solid map-get($clr-palette, "pc");
+  }@else{
+    outline: 2px solid map-get($clr-palette, "sc");
+    color: map-get($clr-palette, "sc");
+    background-color: map-get($clr-palette, "pc");
+  }
+
+  outline-offset: $offset;
+  transition: all .2s ease-in-out;
+
+  &:is(:hover, :focus){
+    outline: 2px solid map-get($clr-palette, "sc");
+    color: map-get($clr-palette, "sc");
+    background-color: map-get($clr-palette, "pc");
+    box-shadow: $shadow $shadow 0 0 map-get($clr-palette, "3c");
+  }
+}
+
+@mixin input($h, $w, $offset: -6px, $shadow: 5px){
+  height: $h;
+  width: $w;
+  padding: 20px;
+  border: none;
+  outline-offset: $offset;
+  color: map-get($clr-palette, "sc");
+  background-color: white;
+  outline: 2px solid map-get($clr-palette, "pc");
+  transition: all .2s ease-in-out;
+  &:is(:hover, :focus, :not(:placeholder-shown)){
+    box-shadow: $shadow $shadow 0 0 map-get($clr-palette, "pc");
+  }
+}
+
+@mixin frame($h, $w, $shadow: 5px){
+  height: $h;
+  width: $w;
+  border: 2px solid map-get($clr-palette, "pc");
+  transition: all .2s ease-in-out;
+  &:is(:hover, :focus), &:has(*:is(:hover, :focus)){
+    box-shadow: $shadow $shadow 0 0 map-get($clr-palette, "3c");
+    transform: scale(1.02);
+  }
+
+
+
+}
+
+@mixin fancy-underline($clr: "atc"){
+  position: relative;
+  transition: all .2s ease-in-out;
+  &::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5%;
+    height: 2px;
+    width: 0%;
+    transition: all .2s ease-in-out;
+    background-color: map-get($clr-palette, $clr);
+  }
+  
+  &:is(:hover, :focus){
+    color: map-get($clr-palette, $clr);
+  }
+
+  &:is(:hover, :focus)::before{
+    width: 100%;
+  }
+}
+
+@mixin badge{
+  outline-offset: -12px;
+  outline: 2px solid map-get($clr-palette, "pc");
+  transition: all .2s ease-in-out;
+  padding: 40px 50px;
+  @include flx-center(25px, column);
+  background-color: map-get($clr-palette, "sc");
+  box-shadow: 8px 8px 0 0 map-get($clr-palette, "4c");
+  
+  &:is(:hover, :focus, :focus-within){
+    box-shadow: 10px 10px 0 0 map-get($clr-palette, "3c");
+    transform: scale(1.02);
+  }
+}
+
+@mixin form-style{
+  outline-offset: -12px;
+  outline: 2px solid map-get($clr-palette, "pc");
+  transition: all .2s ease-in-out;
+  padding: 40px 50px;
+  @include flx-center(25px, column);
+  background-color: map-get($clr-palette, "sc");
+  box-shadow: 8px 8px 0 0 map-get($clr-palette, "4c");
+  
+  &:is(:hover, :focus, :focus-within){
+    box-shadow: 10px 10px 0 0 map-get($clr-palette, "3c");
+    transform: scale(1.02);
+  }
+
+  h2{
+    margin: 25px 0;
+    font-size: 1.9rem;
+  }
+
+  
+  input{
+    @include input(20px, 300px);
+  }
+
+  button{
+    @include btn(45px, 140px);
+    border: none;
+  }
+
+  .btns{
+    width: 80%;
+    @include flx-center(40px);
+    // background-color: aqua;
+    a{
+      @include btn(45px, 140px, "s");
+    }
+  }
+
+  p{
+    font-size: small;
+    a{
+      @include fancy-underline;
+    }
+  }
+
+}
+
+@mixin form-error(){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 40px;
+  outline-offset: -8px;
+  outline: 2px solid map-get($clr-palette, "error");
+  background-color: map-get($clr-palette, "sc");
+  opacity: 0;
+  z-index: 3;
+  li{
+    color: map-get($clr-palette, "error");
+  }
+  &.active{
+    animation: actvError .3s cubic-bezier(0.19, 1, 0.22, 1) .1s forwards;
+    @keyframes actvError {
+      to{
+        top: 15%;
+        opacity: 1;
+      }
+    }
+  }
+  &.hidden{
+    animation: hideError .1s ease-in forwards;
+    @keyframes hideError {
+      to{
+        opacity: 0;
+        top: 50%;
+      }
+    }
+  }
+}
+
+// Animation:
+@mixin slide($type, $d: 0s){
+  @if &type == "l"{
+    @include left-slide($d);
+  }
+  @if &type == "r"{
+    @include right-slide($d);
+  }
+  @if &type == "u"{
+    @include up-slide($d);
+  }
+  @if &type == "d"{
+    @include down-slide($d);
+  }
+}
+
+@mixin left-slide($d){
+  animation: ls 1s ease-in-out $d forwards;
+  @keyframes ls{
+    from{
+      opacity: 0;
+      transform: translateX(200%);
+    }to{
+      opacity: 1;
+      transform: translate(0,0,0);
+    }
+  }
+}
+
+@mixin right-slide($d){
+  animation: rs 1s ease-in-out $d forwards;
+  @keyframes rs{
+    from{
+      opacity: 0;
+      transform: translateX(-200%);
+    }to{
+      opacity: 1;
+      transform: translate(0,0,0);
+    }
+  }
+}
+
+@mixin up-slide($d){
+  animation: us 1s ease-in-out $d forwards;
+  @keyframes us{
+    from{
+      opacity: 0;
+      transform: translateY(-200%);
+    }to{
+      opacity: 1;
+      transform: translate(0,0,0);
+    }
+  }
+}
+
+@mixin down-slide($d){
+  animation: ds 1s ease-in-out $d forwards; 
+  @keyframes ds{
+    from{
+      opacity: 0;
+      transform: translateY(200%);
+    }to{
+      opacity: 1;
+      transform: translate(0,0,0);
+    }
+  }
+}
+
+@mixin aos-cover($der, $bxs: "pc"){
+  @if $der == "l"{
+    animation: laos 2s ease-in-out 0s forwards;
+    @keyframes laos{
+      0%{
+        opacity: 0;
+        transform: translateX(200%);
+      }
+      65%{
+        opacity: 1;
+        transform: translateX(0%);
+        box-shadow: 0px 0px 0 0 map-get($clr-palette, $bxs);
+      }
+      100%{
+        opacity: 1;
+        transform: translateX(0%);
+        box-shadow: 18px 18px 0 0 map-get($clr-palette, $bxs);
+      }
+    }
+  }
+  @if $der == "r"{
+    animation: raos 2s ease-in-out 0s forwards;
+    @keyframes raos{
+      0%{
+        opacity: 0;
+        transform: translateX(-200%);
+      }
+      65%{
+        opacity: 1;
+        transform: translateX(0%);
+        box-shadow: 0px 0px 0 0 map-get($clr-palette, $bxs);
+      }
+      100%{
+        opacity: 1;
+        transform: translateX(0%);
+        box-shadow: 18px 18px 0 0 map-get($clr-palette, $bxs);
+      }
+    }
+  }
+
+}

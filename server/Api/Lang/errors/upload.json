@@ -1,0 +1,17 @@
+{
+    "en":{
+        "empty":"None of those fields can be empty!",
+        "file":"Media files are required",
+        "link":"The given links are not valid"
+    },
+    "fr":{
+        "empty":"Aucun de ces champs ne peut être vide!",
+        "file":"Les fichiers multimédias sont requis",
+        "link":"Les liens donnés ne sont pas valides"
+    },
+    "ar":{
+        "empty":"لا يمكن أن يكون أي من هذه الحقول فارغًا!",
+        "file":"ملفات الوسائط مطلوبة",
+        "link":"الروابط المقدمة غير صالحة"
+    }
+}

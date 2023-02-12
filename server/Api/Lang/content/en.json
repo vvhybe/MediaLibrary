@@ -1,0 +1,17 @@
+{
+    "header":{
+        "nav":["Home","Books","Music","Videos", "Content Management"],
+        "login":"Login",
+        "logout":"Logout",
+        "regester":"Regester"
+    },
+    "hero":{
+        "title":"Welcome to your Dashboard",
+        "motivation":"As the administrator, you have access to powerful tools and insights to manage and grow your library. With a clear and intuitive interface, you can easily keep track of your collections, monitor user engagement, and make informed decisions to enhance the user experience. Empower yourself to take control of your library and drive its success."
+    },
+    "dashboard":{
+        "book":"Add New Book",
+        "music":"Add New Song",
+        "video":"Add New Video"
+    }
+}

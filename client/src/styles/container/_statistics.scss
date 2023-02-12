@@ -1,0 +1,35 @@
+@import "../main.scss";
+
+.statistics{
+    width: 100%;
+    @include no-list;
+    @include flx-center;
+    justify-content: space-around;
+    
+    li{
+        margin-block: 40px;
+        @include badge;
+        cursor: pointer;
+        *{margin: 0;}
+        h1{
+            color: map-get($clr-palette, "atc");
+        }
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .statistics{
+        flex-direction: column;
+        li{
+            height: 230px;
+            width: 60%;
+            h1{
+                font-size: 2.5rem !important;
+            }
+            p{
+                font-size: 1.3rem !important;
+            }
+        }
+    }
+}

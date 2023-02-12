@@ -1,0 +1,204 @@
+@import "../main.scss";
+
+header{
+    height: 1vh;
+    width: 100%;
+    padding: 2em;
+    position: relative;
+    z-index: 10000;
+    @include flx-content(space-between);
+    // flex-wrap: wrap;
+    .logo{
+        @include bg-img(50px, 50px, "../../public/Res/Logo/bl.png");
+    }
+    .navbar{
+        width: 92%;
+        @include flx-content(space-between);
+        transition: cubic-bezier(0.19, 1, 0.22, 1);
+        // @include flx-center(24px);
+        nav ul{
+            @include no-list;
+            li a{
+                position: relative;
+                font-size: large;
+                transition: all .2s ease-in-out;
+                font-size: 1.2rem;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -5%;
+                    height: 2px;
+                    width: 0%;
+                    transition: all .2s ease-in-out;
+                    background-color: map-get($clr-palette, "atc");
+                }
+                &:is(:hover, :focus), &.active{
+                    color: map-get($clr-palette, "atc");
+                }
+                &:is(:hover, :focus)::before, &.active::before{
+                    width: 100%;
+                }
+            }
+        }
+        .config{
+            @include flx-center(20px);
+            .auth{
+                @include flx-center(20px);
+                a:nth-child(1){
+                    @include btn(40px, 85px);
+                }
+                a:nth-child(2){
+                    @include btn(40px, 85px, "s");
+                }
+            }
+    
+            .welcome{
+                @include flx-center(20px);
+                a{
+                    @include fancy-underline;
+                }
+                button{
+                    @include btn(40px, 85px);
+                }
+            }
+    
+            .langconfig{
+                outline: none;
+                border: none;
+                background: none !important;
+                border-bottom: 2px solid map-get($clr-palette, "ptc");
+                cursor: pointer;
+                &:hover, &:focus-within{
+                    color: map-get($clr-palette, "atc");
+                    border-bottom: 2px solid map-get($clr-palette, "atc");
+                }
+    
+                option{
+                    background: none;
+                    border-radius: 0;
+                    color: map-get($clr-palette, "atc");
+                    &:hover{
+                        color: map-get($clr-palette, "ptc");
+                        background: map-get($clr-palette, "atc") !important;
+                    }
+                }
+            }
+    
+        }
+
+
+        .closeburgermenu{
+            display: none;
+        }
+    }
+
+    .burgermenu{
+        height: 60px;
+        width: 40px;
+        @include flx-center(6px, column);
+        align-items: flex-end;
+        display: none;
+        div{
+            height: 5px !important;
+            background-color: map-get($clr-palette, "pc");
+            &:nth-child(1){
+                width: 80%;
+            }
+            &:nth-child(2){
+                width: 100%;
+            }
+            
+            &:nth-child(3){
+                width: 60%;
+            }
+        }
+    }
+
+
+}
+
+
+@media only screen and (max-width: 930px){
+    header{
+        height: 2vh !important;
+        .navbar{
+            position: fixed;
+            right: 100%;
+            top: 0;
+            height: 100vh !important;
+            width: 100% !important;
+            overflow: visible !important;
+            background-color: map-get($clr-palette, "bg");
+            @include flx-center(50px, column);
+            
+
+            &.show{
+                right: 0 !important;
+            }
+
+            nav ul{
+                flex-direction: column;
+                gap: 32px;
+                li a{
+                    font-size: 1.5rem;
+                }
+            }
+
+            .config{
+                padding-block: 10px;
+                width: 60%;
+                flex-direction: column;
+                gap: 60px;
+
+                .auth{
+                    transform: scale(1.3);
+                }
+
+                .welcome{
+                    flex-direction: column;
+                    transform: scale(1.4);
+                    margin-bottom: 40px;
+                }
+
+                .langconfig{
+                    font-size: 1.3rem;
+                }
+
+
+            }
+
+            .closeburgermenu{
+                @include flx-center;
+                height: 40px;
+                width: 40px;
+                position: absolute;
+                top: 4%;
+                right: 6%;
+
+                div{
+                    width: 4px;
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: map-get($clr-palette, "pc");
+                    &:nth-child(1){
+                        transform: translate(-50%, -50%) rotate(45deg);
+                    }
+                    &:nth-child(2){
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+
+                }
+            }
+
+
+        }
+        .burgermenu{
+            display: flex !important;
+        }
+    }
+}

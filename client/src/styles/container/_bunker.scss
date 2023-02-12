@@ -1,0 +1,227 @@
+@import "../main.scss";
+
+ul.bunker{
+    width: 90%;
+    @include no-list;
+    @include flx-center(40px);
+    flex-wrap: wrap;
+}
+li.media{
+    position: relative;
+    @include frame(360px, 240px);
+    @include flx-center(0, column);
+    background-color: map-get($clr-palette, "sc");
+    overflow: hidden;
+
+    .info{
+        
+        *{
+            margin: 0;
+            text-align: center;
+        }
+
+        a{
+            transition: all .3s ease-in-out;
+            &:is(:hover, :focus){
+                text-decoration: underline;
+            }
+        }
+
+        h3{
+            a{
+                color: map-get($clr-palette, "atc");
+            }
+        }
+    }
+
+    &.books{
+        @include bg-img(360px, 240px, "../../public/Res/Icons/book-placeholder.png");
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .info{
+            position: absolute;
+            bottom: -100%;
+            opacity: 0;
+            padding-block: 18px;
+            width: 100%;
+            @include flx-center(5px, column);
+            background-color: rgba(0, 0, 0, 0.767);
+            transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
+
+            h3{
+                a{
+                    color: map-get($clr-palette, "atc");
+                }
+            }
+
+            p{
+                width: 80%;
+            }
+
+            button{
+                @include btn(35px, 50%);
+                *{
+                    color: map-get($clr-palette, "sc");
+                    font-size: 1rem;      
+                }
+            }
+        }
+
+        &:hover .info, .info:has(*:focus){
+            bottom: 0;
+            opacity: 1;
+        }
+    }
+
+    &.music{
+        height: 340px;
+        width: 240px;
+        
+        .cover{
+            position: relative;
+            @include bg-img(60%, 90%, "../../public/Res/Icons/music-placeholder.png");
+            background-color: map-get($clr-palette, "atc");
+            @include flx-center;
+            overflow: hidden;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                transition: all .2s ease-in-out;
+            }
+
+            button{
+                position: absolute;
+                @include btn(50px, 50px, "p", -6px, 0px);
+                bottom: -100%;
+                right: 12%;
+                opacity: 0;
+                border-radius: 50%;
+                transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
+
+                *{
+                    font-size: 1rem;                 
+                    color: map-get($clr-palette, "sc");
+                    height: 30px;
+                    
+                }
+                
+                &:hover{
+                    transform: scale(1.06);
+                }
+                &:active{
+                    transform: scale(.8);
+                }
+            }
+        }
+
+        .info{
+            height: 30%;
+            width: 90%;
+            @include flx-center(0, column);
+
+            h3{
+                font-size: medium;
+            }
+
+            p{
+                width: 80%;
+                font-size: .7rem;
+            }
+ 
+
+        }
+
+        &:hover, &:has(*:focus){
+            .cover {
+                button{
+                    bottom: 8%;
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+
+
+    &.videos{
+        height: 260px;
+        width: 320px;
+        .cover{
+            position: relative;
+            @include bg-img(180px, 100%, "../../public/Res/Icons/video-placeholder.png");
+            @include flx-center;
+            overflow: hidden;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                transition: all .2s ease-in-out;
+            }
+
+            button{
+                position: absolute;
+                @include btn(50px, 50px, "p", -6px, 0px);
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                border-radius: 50%;
+                transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
+
+                *{
+                    font-size: 1rem;                 
+                    color: map-get($clr-palette, "sc");
+                    height: 30px;
+                }
+                
+                &:hover{
+                    transform: scale(1.06) translate(-50%, -50%);
+                }
+                &:active{
+                    transform: scale(.8) translate(-50%, -50%);
+                }
+            }
+        }
+
+        .info{
+            height: 260px - 180px;
+            width: 100%;
+            @include flx-center(0, column);
+
+            h3{
+                font-size: medium;
+            }
+
+            p{
+                width: 80%;
+                font-size: .7rem;
+            }
+
+        }
+
+        &:hover, &:has(*:focus){
+            .cover {
+                button{
+                    top: 50%;
+                    opacity: 1;
+                }
+
+                img{
+                    filter: brightness(40%);
+                }
+
+            }
+        }
+
+    }
+}

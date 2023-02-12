@@ -1,0 +1,14 @@
+{
+    "en":{
+        "empty":"Password And Email can not be empty!",
+        "unauthorized":"Password or Email incorrect!"
+    },
+    "fr":{
+        "empty":"Le mot de passe et l'e-mail ne peuvent pas être vides!",
+        "unauthorized":"Mot de passe ou email incorrect!"
+    },
+    "ar":{
+        "empty":"لا يمكن ترك كلمة المرور والبريد الإلكتروني فارغين!",
+        "unauthorized":"كلمة المرور أو البريد الإلكتروني غير صحيح!"
+    }
+}

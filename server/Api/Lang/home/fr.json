@@ -1,0 +1,20 @@
+{
+    "header":{
+        "nav":["Accueil","Livres","Musiques","Vidéos","Gestion de contenu"],
+        "login":"Connexion", 
+        "logout":"Se déconnecter",
+        "regester":"S'inscrire"
+    },
+    "hero":{
+        "title":"Bienvenue dans notre bibliothèque de médias",
+        "motivation":"Où vous pouvez accéder à une vaste collection de vidéos, de musique et de livres tout en un seul endroit. Que vous ayez envie d'un nouveau film, de l'album le plus récent ou d'un roman classique, nous avons quelque chose pour tout le monde. Avec notre interface facile à utiliser, vous pouvez facilement trouver ce que vous recherchez et commencer à diffuser ou à télécharger en quelques secondes. Alors pourquoi attendre? Commencez à explorer notre bibliothèque dès maintenant et découvrez votre prochain média préféré!"
+    },
+    "sections":{
+        "summeries":{
+            "books":"Avec une vaste collection de livres de tous genres et de toutes époques, vous aurez le choix entre une infinité d'options. Que vous recherchiez un roman classique, un nouveau livre ou un guide sur un sujet spécifique, notre interface facile à utiliser vous permet de trouver précisément ce que vous cherchez.",
+            "music":"Vous pouvez parcourir, prévisualiser et diffuser ou télécharger n'importe quelle chanson que vous voulez. Que vous soyez d'humeur pour de la pop entraînante, du classique apaisant ou du heavy metal, nous avons quelque chose pour tous les goûts. Notre bibliothèque musicale est constamment mise à jour avec de nouvelles versions et de nouveaux artistes.",
+            "videos":"Vous pouvez parcourir, prévisualiser et diffuser ou télécharger n'importe quelle chanson que vous voulez. Que vous soyez d'humeur pour de la pop entraînante, du classique apaisant ou du heavy metal, nous avons quelque chose pour tous les goûts. Notre bibliothèque musicale est constamment mise à jour avec de nouvelles versions et de nouveaux artistes."
+        },
+        "btn":"Découvrez maintenant"
+    }
+}

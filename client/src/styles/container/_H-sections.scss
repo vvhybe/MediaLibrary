@@ -1,0 +1,119 @@
+section.Hsections{
+    width: 100%;
+    padding-block: 20px;
+    @include flx-center(43px, column);
+
+    .sec{
+        height: 70vh !important;
+        @include flx-center(8px);
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        overflow: hidden;     
+
+        .summry{
+            height: 80%;
+            width: 30%;
+            @include flx-center(0, column);
+            justify-content: space-around;
+
+            p{
+                opacity: 0;
+            }
+
+            a{
+                @include btn(40px, 60%);
+                opacity: 0;
+            }
+        }
+
+        // AOS animation
+        &.intersect{
+            .cover{
+                @include aos-cover("l");
+            }
+            
+            .summry{
+                p{
+                    @include slide("u", .5s);
+                }
+                
+                a{
+                    @include slide("d", 1s);
+                }
+            }
+        }
+
+
+        &.books{
+            .cover{
+                @include bg-img(80%, 50%, "../../public/Res/Sections/book.jpg");
+            }
+        }
+        
+        &.music{
+            flex-direction: row;
+            .cover{
+                @include bg-img(80%, 50%, "../../public/Res/Sections/music.jpg");
+            }
+            
+            a{
+                color: map-get($clr-palette, "pc");
+                background-color: map-get($clr-palette, "sc");
+                outline-color: map-get($clr-palette, "pc");
+            }
+
+            &.intersect{
+                .cover{
+                    @include aos-cover("r", "sc");
+                }
+                
+                .summry{
+                    p{
+                        @include slide("d", .5s);
+                    }
+                    
+                    a{
+                        @include slide("u", 1s);
+                    }
+                }
+            }
+            
+        }
+
+        &.videos{
+            .cover{
+                @include bg-img(80%, 50%, "../../public/Res/Sections/video.jpg");
+                filter: contrast(140%) brightness(90%);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    section.Hsections{
+        .sec{
+            height: 80vh;
+            width: 100%;
+            flex-direction: column !important;
+            gap: 24px;
+
+            .cover{
+                height: 80vh !important;
+                width: 80% !important;
+            }
+
+            .summry{
+                width: 80%;
+                p{
+                    text-align: center;
+                    font-size: 1rem;
+                    margin-bottom: 20px;
+                }
+                a{
+                    height: 60px;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import "main.scss";
+@import "./container/header";
+@import "./container/hero";
+@import "./container/search";
+@import "./container/H-sections";
+@import "./container/bunker";
+@import "./container/form";
+@import "./container/footer";
+@import "./container/profile";
+@import "./container/dashboard";
+@import "./container/statistics";
+@import "./container/notfound";
+
+body {
+    @include body-init();
+    @include flx-center(0, column);
+}
+
+#container{
+    width: 100%;
+    @include flx-center(0, column);
+}
+
+*{
+    @include global-init();
+}
+
+:root:lang("ar"){
+    font-size: x-large;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 4px;
+    background-color: map-get($clr-palette, "pc");
+}
+
+a{
+    outline: none;
+    text-decoration: none;
+}
+
+.sepicon{
+    @include bg-img(18px, 60px, "../../public/Res/Icons/olive.png");
+    margin-block: 40px;    
+}
+
+
+

@@ -1,0 +1,40 @@
+@import "../main.scss";
+footer{
+    width: 100%;
+    margin-block: 40px;
+    @include flx-center(15px, column);
+    .oliveico{
+        @include bg-img(25px, 80px, "../../public/Res/Icons/olive.png");
+    }
+    
+    nav ul{
+        @include no-list;
+        flex-wrap: wrap;
+        padding: 10px 20px;
+        border-bottom: 2px solid map-get($clr-palette, "ptc");
+    }
+    
+    li a{
+        color: map-get($clr-palette, "4c") !important;
+        transform: all .2s ease-in-out;
+        &:hover{
+            color: map-get($clr-palette, "ptc") !important;
+        }
+    }
+
+    h5{
+        margin: 0;
+        word-spacing: 2px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    footer nav ul{
+        // @include flx-center(5px, column);
+        border: none;
+        li{
+            padding-block: 5px;
+            border-bottom: 2px solid map-get($clr-palette, "ptc");
+        }
+    }
+}

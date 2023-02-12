@@ -1,0 +1,14 @@
+{
+    "header":{
+        "nav":["Accueil","Livres","Musiques","Vidéos","Gestion de contenu"],
+        "login":"Connexion", 
+        "logout":"Se déconnecter",
+        "regester":"S'inscrire"
+    },
+    "hero":{
+        "title":"Bienvenue dans notre Bibliothèque de Livres",
+        "motivation":"Où vous pouvez accéder à une vaste collection de vidéos, de musique et de livres en un seul endroit. Que vous soyez d'humeur pour un nouveau film, le dernier album ou un roman classique, nous avons quelque chose pour tout le monde. Grâce à notre interface facile à utiliser, vous pouvez facilement trouver ce que vous cherchez et commencer à diffuser ou à télécharger en quelques secondes. Alors pourquoi attendre ? Commencez à explorer notre bibliothèque dès aujourd'hui et découvrez votre prochain média préféré!",
+        "placeholder":"Recherchez votre livre"
+    }
+
+}

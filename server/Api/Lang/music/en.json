@@ -1,0 +1,13 @@
+{
+    "header":{
+        "nav":["Home","Books","Music","Videos", "Content Management"],
+        "login":"Login",
+        "logout":"Logout",
+        "regester":"Regester"
+    },
+    "hero":{
+        "title":"Welcome to our Music library",
+        "motivation":"Discover the world of music with our library. With a vast collection of songs from all genres and time periods, you'll have endless options to choose from.",
+        "placeholder":"Search for your music"
+    }
+}

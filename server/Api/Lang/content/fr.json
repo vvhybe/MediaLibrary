@@ -1,0 +1,18 @@
+{
+    "header":{
+        "nav":["Accueil","Livres","Musiques","Vidéos","Gestion de contenu"],
+        "login":"Connexion", 
+        "logout":"Se déconnecter",
+        "regester":"S'inscrire"
+    },
+    "hero":{
+        "title":"Bienvenue sur votre tableau de bord",
+        "motivation":"En tant qu'administrateur, vous avez accès à des outils puissants et à des informations pour gérer et développer votre bibliothèque. Avec une interface claire et intuitive, vous pouvez facilement suivre vos collections, surveiller l'engagement des utilisateurs et prendre des décisions informées pour améliorer l'expérience utilisateur. Donnez-vous les moyens de prendre le contrôle de votre bibliothèque et de conduire son succès."
+    },
+    "dashboard":{
+        "book":"Ajouter Un Nouveau Livre",
+        "music":"Ajouter Une Nouvelle Chanson",
+        "video":"Ajouter Une Nouvelle vidéo"
+    }
+
+}

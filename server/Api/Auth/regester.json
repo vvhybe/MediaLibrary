@@ -1,0 +1,26 @@
+{
+    "en":{
+        "empty":"None of those fields can be empty!",
+        "name":"Name must be alphabetic and 2 characters or longer",
+        "email":"Email must look like 'example@email.com'",
+        "password":"Password must contain [a-z] and [A-Z] with numbers and special characters [@#$&]",
+        "Cpassword":"Password doesn't match",
+        "alreadyexists":"User already exists with this Email: "
+    },
+    "fr":{
+        "empty":"Aucun de ces champs ne peut être vide!",
+        "name":"Le pre/nom doit être alphabétique et 2 caractères ou plus",
+        "email":"L'e-mail doit ressembler à 'example@email.com'",
+        "password":"Le mot de passe doit contenir [a-z] et [A-Z] avec des chiffres et des caractères spéciaux [@#$&]",
+        "Cpassword":"Le mot de passe ne correspond pas",
+        "alreadyexists":"L'utilisateur existe déjà avec cet e-mail: "
+    },
+    "ar":{
+        "empty":"لا يمكن أن يكون أي من هذه الحقول فارغًا!",
+        "name":"يجب أن يكون الاسم أبجديًا ويتكون من حرفين أو أكثر",
+        "email":"يجب أن يبدو البريد الإلكتروني مثل 'example@email.com'",
+        "password":"يجب أن تحتوي كلمة المرور على [a-z] و [A-Z] مع أرقام وأحرف خاصة [@#$&]",
+        "Cpassword":"كلمة المرور غير متطابقة",
+        "alreadyexists":"المستخدم موجود بالفعل مع هذا البريد الإلكتروني: "
+    }
+}
